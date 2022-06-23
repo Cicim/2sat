@@ -1,0 +1,7 @@
+c (not x or y) and (not y or z) and (x or not z) and (z or y)
+
+p cnf 3 4
+-1 2 0
+-2 3 0
+1 -3 0
+3 2 0

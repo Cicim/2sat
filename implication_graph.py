@@ -22,8 +22,8 @@ class ImplicationGraph:
             self.g.add_node(-c[0])
             self.g.add_node(-c[1])
             # add new edges to implication graph
-            self.g.add_edge(c[0], -c[1])
             self.g.add_edge(-c[0], c[1])
+            self.g.add_edge(-c[1], c[0])
 
     def literals(self):
         for l in self.g.nodes:
@@ -34,7 +34,7 @@ class ImplicationGraph:
             yield l
 
     def draw(self):
-        nx.draw(self.g, **options)
+        nx.draw_spectral(self.g, **options)
         plt.show()
 
 
