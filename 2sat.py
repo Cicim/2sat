@@ -61,6 +61,8 @@ def solve_cnf_file(filename):
     sccs = tarjan(graph)
     print(sccs)
     duals = find_duals(sccs)
+    
+    graph.draw_sccs()
 
     model = two_sat(sccs, duals)
     if model is None:
