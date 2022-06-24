@@ -82,4 +82,4 @@ def solve_cnf_file(filename):
                 print(f"x_{literal} = {model[literal]}")
 
 
-solve_cnf_file(f"cnf_tests/test3.cnf")
+solve_cnf_file(f"cnf_tests/test6.cnf")
